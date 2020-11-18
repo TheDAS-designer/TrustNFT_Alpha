@@ -10,6 +10,9 @@ const Nav: React.FC = () => {
       <StyledLink exact activeClassName="active" to="/">
         {t.home}
       </StyledLink>
+      <StyledLink exact activeClassName="active" to="/mining">
+          铸币
+      </StyledLink>
       <StyledLink exact activeClassName="active" to="/farms">
         {t.canteen}
       </StyledLink>

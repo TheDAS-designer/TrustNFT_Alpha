@@ -15,6 +15,7 @@ import useModal from './hooks/useModal'
 import theme from './theme'
 import Farms from './views/Farms'
 import Home from './views/Home'
+import Mining from './views/Mining'
 import Stake from './views/Stake'
 import Auction from './views/Auction'
 
@@ -38,6 +39,9 @@ const App: React.FC = () => {
         <Switch>
           <Route path="/" exact>
             <Home />
+          </Route>
+          <Route path="/mining">
+            <Mining />
           </Route>
           <Route path="/farms">
             <Farms />

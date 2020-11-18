@@ -5,6 +5,8 @@ import GovernorAlphaAbi from './abi/ABI_Comp_Gov.json'
 import BentoAbi from './abi/ABI_Bentoken.json'
 import UNIV2PairAbi from './abi/uni_v2_lp.json'
 import WETHAbi from './abi/weth_kovan.json'
+import PledgeUBI from './abi/pledge.json'
+import PotUBI from './abi/pot.json'
 import {
   contractAddresses,
   SUBTRACT_GAS_LIMIT,
@@ -26,6 +28,9 @@ export class Contracts {
     this.bentoMiner = new this.web3.eth.Contract(BentoMinerAbi)
     this.weth = new this.web3.eth.Contract(WETHAbi)
     this.bentoLP =  new this.web3.eth.Contract(UNIV2PairAbi)
+    this.Pledge = new this.web3.eth.Contract(PledgeUBI)
+    this.Pot = new this.web3.eth.Contract(PotUBI)
+
     this.pools = supportedPools.map((pool) =>
       Object.assign(pool, {
         lpAddress: pool.lpAddresses[networkId],
@@ -54,6 +59,8 @@ export class Contracts {
     setProvider(this.bento, contractAddresses.bento[networkId])
     setProvider(this.bentoMiner, contractAddresses.bentoMiner[networkId])
     setProvider(this.weth, contractAddresses.weth[networkId])
+    setProvider(this.Pledge,  contractAddresses.pledge[networkId])
+    setProvider(this.Pot,  contractAddresses.pot[networkId])
     this.pools.forEach(
       ({ lpContract, lpAddress, tokenContract, tokenAddress, govContract, govAddress, pid, originalGovContract, originalGovAddress }) => {
         if(pid === 0) {

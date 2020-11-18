@@ -1,5 +1,11 @@
 body {
-  background: #2a2826;
+  /*background: #04000d;*/
+ 
+  min-width: 1024px;
+  background-image: url(assets/img/home.jpg);
+  background-size:100%;
+  width:100%;
+  height:100%;
   margin: 0;
   font-family: 'Noto Sans', sans-serif;
   font-size: 16px;

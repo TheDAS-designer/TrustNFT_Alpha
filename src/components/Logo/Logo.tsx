@@ -9,7 +9,7 @@ const Logo: React.FC = () => {
     <StyledLogo to="/">
       
       <StyledText>
-        <MasterChefText>Cyber🦾Union</MasterChefText> 
+        <MasterChefText>Trust 💎 NFT</MasterChefText> 
       </StyledText>
     </StyledLogo>
   )

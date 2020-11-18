@@ -81,6 +81,7 @@ export const getGovs = (bento) => {
         govContract,
         originalGovContract,
         originalGovAddress,
+        potContract
       }) => ({
         pid,
         id: symbol,
@@ -98,6 +99,7 @@ export const getGovs = (bento) => {
         earnToken: 'bento',
         earnTokenAddress: bento.contracts.bento.options.address,
         icon,
+        potContract
       }),
     )
     : []
@@ -656,4 +658,16 @@ export const voteOption = async (govContract, pid, support, amount, account) => 
       return tx.transactionHash
     })
   return tx
+}
+
+export const createPot = async(bento, provf, desc, account) => {
+  console.log('bento', bento)
+  console.log('provf', provf)
+  console.log('desc', desc)
+  console.log('account', account)
+  await bento.contracts.Pot.methods.creatPOT(provf, desc, account).send({from: account})
+  .on('transactionHash', (tx) => {
+    console.log(tx)
+    return tx.transactionHash
+  })
 }

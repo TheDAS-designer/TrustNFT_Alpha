@@ -64,6 +64,14 @@ export const contractAddresses = {
     //42: '0xfB9e1591f67d4f9c32995252aEfe8A6EE798fAd7',
     42: '0xb99771f8981E2bFD283aA6710d0f62E4D2aD9bCD'
   },
+  pledge:{
+    42:'0xAC887cD3c6Ce5dD18675A806496D68320E66C426',
+    3:'0xB80Ee3a6F94e8CD235322040b752ec3b57C4e39C'
+  },
+  pot: {
+    42: '0xdE461845e414924D7F8D67f627d32382D97A747C',
+    3:'0xfc16e6f9b89F857cf66DdaF73a2C86620b9DcEBA'
+  }
 }
 
 /*
@@ -148,11 +156,11 @@ export const supportedPools = [
     },
     tokenAddresses: {
       1: '',
-      42: '0x61460874a7196d6a22D1eE4922473664b3E95270'
+      42: '0x0AA2bD81e77aecfD9B3FA17035FeCaF0b61CA89A'
     },
     originalGovAddress: {
       1: '',
-      42: '0x665a5f09716d63D9256934855b0CE2056a5C4Cf8'
+      42: '0x3D6dA2F3EdD4dEE80E35E0369a42334B6f08D454'
     },
     govAddresses: {
       1:'',

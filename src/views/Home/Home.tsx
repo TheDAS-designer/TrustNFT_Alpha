@@ -22,17 +22,9 @@ const Home: React.FC = () => {
       <Page>
         {!!account ? (
           <>
-            <PageHeader
-              icon={<img src={womenChef} height={120} />}
-              title={t.title}
-              subtitle={t.subtitle}
-              content={t.content}
-            />
+            
 
-            <Container>
-              {/* <Balances />  */}
-              <Bento_Balances />
-            </Container>
+<div style={{height:'3900px'}}/>
           </>
         ) : (
             <div
@@ -43,14 +35,6 @@ const Home: React.FC = () => {
                 justifyContent: 'center',
               }}
             >
-
-              <CyberButton
-            buttonWidth={250}
-            buttonHeight={100}
-            onClick={onPresentWalletProviderModal}
-            buttonFontSize={30}
-            text={`${t.unlockWallet}`}
-          />
             </div>
           )}
       </Page>
